@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1853660A-713B-475B-BCFA-1F7D6BC96D22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{18F43B1A-B2A7-4BE0-B8ED-5CDAF4F1FA58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anduin.HappyRecorder", "src\Anduin.HappyRecorder\Anduin.HappyRecorder.csproj", "{B7AC49F0-632F-4F32-ACEF-E038E773EF13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anduin.HappyRecorder.Core", "src\Anduin.HappyRecorder.Core\Anduin.HappyRecorder.Core.csproj", "{DEEF4304-E988-4F17-B39E-962CA62A1BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anduin.HappyRecorder.Tests", "tests\Anduin.HappyRecorder.Tests\Anduin.HappyRecorder.Tests.csproj", "{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7AC49F0-632F-4F32-ACEF-E038E773EF13} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
+		{DEEF4304-E988-4F17-B39E-962CA62A1BAF} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
+		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F} = {18F43B1A-B2A7-4BE0-B8ED-5CDAF4F1FA58}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
