@@ -1,6 +1,9 @@
 # 某种不可描述的统计器
 
-(我很纯洁的。这是送给我那些污污的粉丝的小礼物)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/anduin/happiness-recorder/-/blob/master/LICENSE)
+[![Pipeline stat](https://gitlab.aiursoft.cn/anduin/happiness-recorder/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/anduin/happiness-recorder/-/pipelines)
+[![Test Coverage](https://gitlab.aiursoft.cn/anduin/happiness-recorder/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/anduin/happiness-recorder/-/pipelines)
+[![NuGet version (Anduin.HappyRecorder)](https://img.shields.io/nuget/v/Anduin.HappyRecorder.svg)](https://www.nuget.org/packages/Anduin.HappyRecorder/)
 
 这个项目通过一些简单的数学模型，通过记录你每次感受快乐的时间，计算你的当前身体状态。从而帮助用户订立科学健康的行为周期，避免身体的过度消耗。。。
 
@@ -20,11 +23,6 @@
 
 如果你只需要查询一下，你当前的身体状态如何，打开它，按下N键即可。
 
-![](Untitled.png)
-
 ## 注意事项
 
 刚刚开始用的时候，由于没有历史数据，会不太准。
-
-你可以手工编辑`records.json`，来手工记录快乐。
-
