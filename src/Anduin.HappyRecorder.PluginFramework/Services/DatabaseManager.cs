@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Anduin.HappyRecorder.Calendar.Services;
+namespace Anduin.HappyRecorder.PluginFramework.Services;
 
 public class DatabaseManager
 {

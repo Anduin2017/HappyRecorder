@@ -1,5 +1,5 @@
 ﻿using Aiursoft.CommandFramework.Abstracts;
-using Anduin.HappyRecorder.Calendar.Services;
+using Anduin.HappyRecorder.PluginFramework.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Anduin.HappyRecorder.Calendar;

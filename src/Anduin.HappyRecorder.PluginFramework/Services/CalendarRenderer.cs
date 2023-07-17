@@ -1,4 +1,4 @@
-﻿namespace Anduin.HappyRecorder.Calendar.Services;
+﻿namespace Anduin.HappyRecorder.PluginFramework.Services;
 
 public class CalendarRenderer
 {

@@ -1,9 +1,9 @@
 ﻿using System.CommandLine;
 using Aiursoft.CommandFramework.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Anduin.HappyRecorder.PluginFramework;
+using Anduin.HappyRecorder.PluginFramework.Services.PluginFramework;
 
-namespace Anduin.HappyRecorder.Tests;
+namespace Anduin.HappyRecorder.PluginFramework.Services.Tests;
 
 [TestClass]
 public class IntegrationTests

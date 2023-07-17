@@ -4,18 +4,17 @@ using Anduin.HappyRecorder.Calendar.Handlers.Config;
 using Anduin.HappyRecorder.Calendar.Handlers.Get;
 using Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
-namespace Anduin.HappyRecorder.Calendar
+namespace Anduin.HappyRecorder.Calendar;
+
+public class CalendarPlugin : IPlugin
 {
-    public class CalendarPlugin : IPlugin
+    public CommandHandler[] Install()
     {
-        public CommandHandler[] Install()
+        return new CommandHandler[]
         {
-            return new CommandHandler[]
-            {
-                new GetHandler(),
-                new MarkHandler(),
-                new ConfigHandler()
-            };
-        }
+            new GetHandler(),
+            new MarkHandler(),
+            new ConfigHandler()
+        };
     }
 }

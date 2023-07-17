@@ -1,4 +1,4 @@
-﻿namespace Anduin.HappyRecorder.Calendar.Models;
+﻿namespace Anduin.HappyRecorder.PluginFramework.Models;
 
 public class Event
 {

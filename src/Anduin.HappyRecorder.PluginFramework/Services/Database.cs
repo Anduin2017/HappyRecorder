@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using Anduin.HappyRecorder.Calendar.Models;
+using Anduin.HappyRecorder.PluginFramework.Models;
 
-namespace Anduin.HappyRecorder.Calendar.Services;
+namespace Anduin.HappyRecorder.PluginFramework.Services;
 
 public class Database
 {
