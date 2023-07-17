@@ -24,11 +24,11 @@
 	  <Description>A cli tool project helps recorder happy times and reactions.</Description>
 	  <PackageTags>cli nuget dotnet happy</PackageTags>
 	  <RepositoryType>git</RepositoryType>
-	  <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/happiness-recorder</RepositoryUrl>
+	  <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</RepositoryUrl>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <PackageId>Anduin.HappyRecorder</PackageId>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/happiness-recorder</PackageProjectUrl>
+	  <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</PackageProjectUrl>
     </PropertyGroup>
 
   <ItemGroup>
