@@ -1,6 +1,6 @@
-﻿using Anduin.HappyRecorder.Calendar.Handlers.GetScore;
-using Anduin.CommandFramework.Abstracts;
+﻿using Anduin.CommandFramework.Abstracts;
 using Anduin.CommandFramework.Framework;
+using Anduin.HappyRecorder.Calendar.Handlers.Config;
 
 namespace Anduin.HappyRecorder.Calendar
 {
@@ -10,7 +10,9 @@ namespace Anduin.HappyRecorder.Calendar
         {
             return new CommandHandler[]
             {
-                new GetCommandHandler()
+                new GetHandler(),
+                new MarkHandler(),
+                new ConfigHandler()
             };
         }
     }

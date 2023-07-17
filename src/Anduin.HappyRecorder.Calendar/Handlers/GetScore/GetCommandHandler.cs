@@ -41,6 +41,6 @@ public class ScoreCommandHandler : CommandHandler
             .BuildServices<Startup>(verbose)
             .BuildServiceProvider()
             .GetRequiredService<GetScoreEntry>()
-            .OnServiceStartedAsync();
+            .OnServiceStartedAsync(shouldTakeAction: !dryRun);
     }
 }

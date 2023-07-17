@@ -4,17 +4,17 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 
 public class GetScoreEntry
 {
-    private readonly ILogger<GetScoreEntry> logger;
+    private readonly ILogger<GetScoreEntry> _logger;
 
     public GetScoreEntry(ILogger<GetScoreEntry> logger)
     {
-        this.logger = logger;
+        _logger = logger;
     }
 
-    public Task OnServiceStartedAsync()
+    public Task OnServiceStartedAsync(bool shouldTakeAction)
     {
         Console.WriteLine("Hello!");
-        logger.LogInformation("Hello world!");
+        _logger.LogInformation("Hello world!");
         return Task.CompletedTask;
     }
 }
