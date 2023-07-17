@@ -1,7 +1,7 @@
-﻿using Anduin.HappyRecorder.Core.Abstracts;
+﻿using Anduin.Framework.Abstracts;
 using System.CommandLine;
 
-namespace Anduin.HappyRecorder.Core.Framework;
+namespace Anduin.Framework.Framework;
 
 public static class OptionsProvider
 {
@@ -40,7 +40,7 @@ public static class OptionsProvider
         return command;
     }
 
-    public static RootCommand AddPlugins(this RootCommand command, params IParserPlugin[] pluginInstallers)
+    public static RootCommand AddPlugins(this RootCommand command, params IPlugin[] pluginInstallers)
     {
         foreach (var plugin in pluginInstallers)
         {

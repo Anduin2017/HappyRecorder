@@ -1,5 +1,5 @@
-using Anduin.HappyRecorder.Core.Framework;
-using Anduin.HappyRecorder.FFmpeg;
+using Anduin.Framework.Framework;
+using Anduin.HappyRecorder.Calendar;
 using System.CommandLine;
 using System.Reflection;
 
@@ -8,7 +8,7 @@ var descriptionAttribute = (Assembly.GetEntryAssembly() ?? Assembly.GetExecuting
 var program = new RootCommand(descriptionAttribute ?? "Unknown usage.")
     .AddGlobalOptions()
     .AddPlugins(
-        new FFmpegPlugin()
+        new CalendarPlugin()
     );
 
 return await program.InvokeAsync(args);

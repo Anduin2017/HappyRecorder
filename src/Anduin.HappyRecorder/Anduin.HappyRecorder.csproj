@@ -32,7 +32,7 @@
     </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anduin.HappyRecorder.Core\Anduin.HappyRecorder.Core.csproj" />
+    <ProjectReference Include="..\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj" />
   </ItemGroup>
 
 </Project>

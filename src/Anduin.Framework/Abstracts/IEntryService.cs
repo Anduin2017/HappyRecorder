@@ -1,4 +1,4 @@
-﻿namespace Anduin.HappyRecorder.Core.Abstracts;
+﻿namespace Anduin.Framework.Abstracts;
 
 public interface IEntryService
 {

@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{18F43B1A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder", "src\Anduin.HappyRecorder\Anduin.HappyRecorder.csproj", "{B7AC49F0-632F-4F32-ACEF-E038E773EF13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Core", "src\Anduin.HappyRecorder.Core\Anduin.HappyRecorder.Core.csproj", "{DEEF4304-E988-4F17-B39E-962CA62A1BAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.Framework", "src\Anduin.Framework\Anduin.Framework.csproj", "{DEEF4304-E988-4F17-B39E-962CA62A1BAF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Tests", "tests\Anduin.HappyRecorder.Tests\Anduin.HappyRecorder.Tests.csproj", "{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}"
 EndProject
@@ -46,5 +46,8 @@ Global
 		{DEEF4304-E988-4F17-B39E-962CA62A1BAF} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F} = {18F43B1A-B2A7-4BE0-B8ED-5CDAF4F1FA58}
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B3D91BA-D157-48F0-B66E-899B29902C2D}
 	EndGlobalSection
 EndGlobal

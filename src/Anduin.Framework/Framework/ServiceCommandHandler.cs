@@ -1,9 +1,9 @@
 ﻿using System.CommandLine;
-using Anduin.HappyRecorder.Core.Abstracts;
+using Anduin.Framework.Abstracts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Anduin.HappyRecorder.Core.Framework;
+namespace Anduin.Framework.Framework;
 
 public abstract class ServiceCommandHandler<TE, TS> : CommandHandler
     where TE : class, IEntryService
@@ -42,8 +42,6 @@ public abstract class ServiceCommandHandler<TE, TS> : CommandHandler
         });
 
         var startUp = new TS();
-        services.AddMemoryCache();
-        services.AddHttpClient();
         startUp.ConfigureServices(services);
         services.AddTransient<TE>();
         return services;
