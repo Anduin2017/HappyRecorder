@@ -35,12 +35,13 @@ public class NowHandler : CommandHandler
 
         if (!dryRun)
         {
+            logger.LogInformation("Adding new event");
             events.Add(new Event
             {
                 HappenTime = DateTime.UtcNow
             });
         }
         await db.SaveChangesAsync();
-        logger.LogInformation("Marked current time as happy time.");
+        logger.LogInformation("Marked current time as happy time");
     }
 }
