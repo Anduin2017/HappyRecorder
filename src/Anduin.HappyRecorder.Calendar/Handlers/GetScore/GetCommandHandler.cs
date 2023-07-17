@@ -2,12 +2,7 @@
 using Anduin.CommandFramework.Models;
 using Anduin.CommandFramework.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.CommandLine;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 

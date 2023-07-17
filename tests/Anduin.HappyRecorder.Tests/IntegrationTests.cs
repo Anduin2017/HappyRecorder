@@ -12,7 +12,7 @@ public class IntegrationTests
 
     public IntegrationTests()
     {
-        this._program = new RootCommand("Test env.")
+        _program = new RootCommand("Test env.")
             .AddGlobalOptions()
             .AddPlugins();
     }

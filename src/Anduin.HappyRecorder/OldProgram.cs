@@ -12,7 +12,7 @@ namespace JAI
                 await File.WriteAllTextAsync(database, JsonSerializer.Serialize(Array.Empty<DateTime>()));
             }
             var recordsText = await File.ReadAllTextAsync(database);
-            var recordsObjects = JsonSerializer.Deserialize<List<DateTime>>(recordsText);
+            var recordsObjects = JsonSerializer.Deserialize<List<DateTime>>(recordsText)!;
 
             var totalPoints = 100.0;
             var lastCalculatingPoint = DateTime.MinValue;
