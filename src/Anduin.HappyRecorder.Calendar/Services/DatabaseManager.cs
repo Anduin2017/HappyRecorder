@@ -16,6 +16,7 @@ public class DatabaseManager
         "HappyRecorder");
 
     public static readonly string ConfigFileName = "config.txt";
+    
     public static readonly string DatabaseFileName = "database.json";
 
     public static readonly string ConfileFileLocation = Path.Combine(AppDirectoryLocation, ConfigFileName);
@@ -72,13 +73,13 @@ public class DatabaseManager
         {
             if (!File.Exists(databaseLocation))
             {
-                _logger.LogTrace("The database file {databaseLocation} was not found. Creating it...", databaseLocation);
+                _logger.LogTrace("The database file {DatabaseLocation} was not found. Creating it...", databaseLocation);
                 File.Create(databaseLocation).Close();
             }
         }
         catch (Exception e)
         {
-            _logger.LogTrace(e, "Error when creating database file {databaseLocation}", databaseLocation);
+            _logger.LogTrace(e, "Error when creating database file {DatabaseLocation}", databaseLocation);
         }
         
         return databaseLocation;
@@ -86,12 +87,12 @@ public class DatabaseManager
 
     public async Task SetDbLocatgion(string newLocation)
     {
-        _logger.LogTrace("Setting database location to {newLocation}", newLocation);
+        _logger.LogTrace("Setting database location to {NewLocation}", newLocation);
         var oldDbLocation = await GetDbLocation();
 
         if (!Directory.Exists(newLocation))
         {
-            _logger.LogError("The directory: {newLocation} was not found!", newLocation);
+            _logger.LogError("The directory: {NewLocation} was not found!", newLocation);
             throw new DirectoryNotFoundException($"The directory: {newLocation} was not found!");
         }
 
@@ -100,22 +101,25 @@ public class DatabaseManager
         // Ensure the new database file can be created
         if (!File.Exists(newDatabaseLocation))
         {
-            _logger.LogTrace("The database file {newDatabaseLocation} was not found. Creating it...", newDatabaseLocation);
+            _logger.LogTrace("The database file {NewDatabaseLocation} was not found. Creating it...", newDatabaseLocation);
             File.Create(newDatabaseLocation).Close();
         }
 
-        _logger.LogTrace("Setting database location to {newDatabaseLocation} in config file", newDatabaseLocation);
+        _logger.LogTrace("Setting database location to {NewDatabaseLocation} in config file", newDatabaseLocation);
         await SetConfigFileContent(newDatabaseLocation);
 
         // Migrate the database to the new location
         if (File.Exists(oldDbLocation))
         {
-            _logger.LogTrace("Migrating database from {oldDbLocation} to {newDatabaseLocation}", oldDbLocation, newDatabaseLocation);
+            _logger.LogTrace("Migrating database from {OldDbLocation} to {NewDatabaseLocation}", oldDbLocation, newDatabaseLocation);
             var oldDb = await File.ReadAllTextAsync(oldDbLocation);
             await File.WriteAllTextAsync(newDatabaseLocation, oldDb);
             
-            _logger.LogTrace("Deleting old database file {oldDbLocation}...", oldDbLocation);
-            File.Delete(oldDbLocation);
+            if (File.Exists(newDatabaseLocation) && File.Exists(oldDbLocation) && oldDbLocation != newDatabaseLocation)
+            {
+                _logger.LogTrace("Deleting old database file {OldDbLocation}...", oldDbLocation);
+                File.Delete(oldDbLocation);
+            }
         }
     }
 }

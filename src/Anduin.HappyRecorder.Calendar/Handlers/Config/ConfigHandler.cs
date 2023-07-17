@@ -2,7 +2,6 @@
 using Anduin.CommandFramework.Framework;
 using Anduin.CommandFramework.Models;
 using Anduin.CommandFramework.Services;
-using Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 using Anduin.HappyRecorder.Calendar.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -122,23 +121,16 @@ public class SetDbLocationHandler : CommandHandler
     public override string Name => "set-db-location";
     public override string Description => "Set current program's database file location.";
     
-    public readonly Option<string> PathOptions = new(
-        aliases: new[] { "--path", "-p" },
-        description: "Path of the videos to be parsed.")
-    {
-        IsRequired = true
-    };
-    
     public override Option[] GetCommandOptions() => new Option[]
     {
-        PathOptions
+        CommonOptionsProvider.PathOptions
     };
 
     public override void OnCommandBuilt(Command command)
     {
         command.SetHandler(Execute, 
             CommonOptionsProvider.VerboseOption,
-            PathOptions);
+            CommonOptionsProvider.PathOptions);
     }
 
     public async Task Execute(bool verbose, string path)

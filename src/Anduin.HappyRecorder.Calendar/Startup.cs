@@ -1,5 +1,4 @@
 ﻿using Anduin.CommandFramework.Abstracts;
-using Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 using Anduin.HappyRecorder.Calendar.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +9,5 @@ public class Startup : IStartUp
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddScoped<DatabaseManager>();
-        services.AddTransient<GetScoreEntry>();
     }
 }
