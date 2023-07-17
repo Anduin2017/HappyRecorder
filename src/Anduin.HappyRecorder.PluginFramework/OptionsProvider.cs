@@ -1,4 +1,4 @@
-﻿using Anduin.CommandFramework.Models;
+﻿using Aiursoft.CommandFramework.Models;
 using System.CommandLine;
 
 namespace Anduin.HappyRecorder.PluginFramework;

@@ -1,8 +1,8 @@
-using Anduin.CommandFramework.Extensions;
 using Anduin.HappyRecorder.Calendar;
 using Anduin.HappyRecorder.PluginFramework;
 using System.CommandLine;
 using System.Reflection;
+using Aiursoft.CommandFramework.Extensions;
 
 namespace Anduin.HappyRecorder
 {

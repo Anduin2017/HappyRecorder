@@ -1,7 +1,7 @@
-﻿using Anduin.CommandFramework.Abstracts;
-using System.CommandLine;
+﻿using System.CommandLine;
+using Aiursoft.CommandFramework.Abstracts;
 
-namespace Anduin.CommandFramework.Extensions;
+namespace Aiursoft.CommandFramework.Extensions;
 
 public static class RootCommandExtensions
 {

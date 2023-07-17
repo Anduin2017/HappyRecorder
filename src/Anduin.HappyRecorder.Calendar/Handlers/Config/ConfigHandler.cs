@@ -1,7 +1,7 @@
 ﻿using System.CommandLine;
-using Anduin.CommandFramework.Framework;
-using Anduin.CommandFramework.Models;
-using Anduin.CommandFramework.Services;
+using Aiursoft.CommandFramework.Framework;
+using Aiursoft.CommandFramework.Models;
+using Aiursoft.CommandFramework.Services;
 using Anduin.HappyRecorder.Calendar.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -44,6 +44,22 @@ public class CalendarHandler : CommandHandler
     public override string Name => "calendar";
 
     public override string Description => "Show score calendar.";
+
+    public override void OnCommandBuilt(Command command)
+    {
+        command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
+    }
+
+    private Task Execute(bool verbose)
+    {
+        var services = ServiceBuilder
+            .BuildServices<Startup>(verbose)
+            .BuildServiceProvider();
+        
+        var calendar = services.GetRequiredService<CalendarRenderer>();
+        calendar.Render();
+        return Task.CompletedTask;
+    }
 }
 
 public class MarkHandler : CommandHandler
@@ -102,7 +118,7 @@ public class GetDbLocationHandler: CommandHandler
         command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
     }
 
-    public async Task Execute(bool verbose)
+    private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)
@@ -133,7 +149,7 @@ public class SetDbLocationHandler : CommandHandler
             CommonOptionsProvider.PathOptions);
     }
 
-    public async Task Execute(bool verbose, string path)
+    private async Task Execute(bool verbose, string path)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)

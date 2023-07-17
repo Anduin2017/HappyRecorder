@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anduin.CommandFramework\Anduin.CommandFramework.csproj" />
+    <ProjectReference Include="..\Aiursoft.CommandFramework\Aiursoft.CommandFramework.csproj" />
   </ItemGroup>
 
 </Project>

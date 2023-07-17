@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
+using Aiursoft.CommandFramework.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Anduin.CommandFramework.Extensions;
 using Anduin.HappyRecorder.PluginFramework;
 
 namespace Anduin.HappyRecorder.Tests;

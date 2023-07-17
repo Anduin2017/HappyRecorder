@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Anduin.CommandFramework.Abstracts;
+namespace Aiursoft.CommandFramework.Abstracts;
 
 public interface IStartUp
 {

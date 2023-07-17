@@ -1,5 +1,5 @@
-﻿using Anduin.CommandFramework.Abstracts;
-using Anduin.CommandFramework.Framework;
+﻿using Aiursoft.CommandFramework.Abstracts;
+using Aiursoft.CommandFramework.Framework;
 using Anduin.HappyRecorder.Calendar.Handlers.Config;
 
 namespace Anduin.HappyRecorder.Calendar

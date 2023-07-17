@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Calendar", "src\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj", "{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.CommandFramework", "src\Anduin.CommandFramework\Anduin.CommandFramework.csproj", "{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aiursoft.CommandFramework", "src\Aiursoft.CommandFramework\Aiursoft.CommandFramework.csproj", "{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.PluginFramework", "src\Anduin.HappyRecorder.PluginFramework\Anduin.HappyRecorder.PluginFramework.csproj", "{7604FE32-8F59-4703-9B8E-5AAF722B4359}"
 EndProject

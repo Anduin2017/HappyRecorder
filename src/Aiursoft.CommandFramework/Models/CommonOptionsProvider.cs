@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-namespace Anduin.CommandFramework.Models;
+namespace Aiursoft.CommandFramework.Models;
 
 public static class CommonOptionsProvider
 {

@@ -1,8 +1,8 @@
-﻿using Anduin.CommandFramework.Abstracts;
+﻿using Aiursoft.CommandFramework.Abstracts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Anduin.CommandFramework.Services;
+namespace Aiursoft.CommandFramework.Services;
 
 public static class ServiceBuilder
 {

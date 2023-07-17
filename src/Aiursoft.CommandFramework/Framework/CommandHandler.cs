@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-namespace Anduin.CommandFramework.Framework;
+namespace Aiursoft.CommandFramework.Framework;
 
 public abstract class CommandHandler
 {
