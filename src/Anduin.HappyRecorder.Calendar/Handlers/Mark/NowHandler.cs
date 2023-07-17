@@ -17,10 +17,13 @@ public class NowHandler : CommandHandler
 
     public override void OnCommandBuilt(Command command)
     {
-        command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
+        command.SetHandler(
+            Execute, 
+            CommonOptionsProvider.VerboseOption, 
+            CommonOptionsProvider.DryRunOption);
     }
 
-    private async Task Execute(bool verbose)
+    private async Task Execute(bool verbose, bool dryRun)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)
@@ -29,10 +32,14 @@ public class NowHandler : CommandHandler
         var db = services.GetRequiredService<Database>();
         var logger = services.GetRequiredService<ILogger<NowHandler>>();
         var events = await db.GetEvents();
-        events.Add(new Event
+
+        if (!dryRun)
         {
-            HappenTime = DateTime.UtcNow
-        });
+            events.Add(new Event
+            {
+                HappenTime = DateTime.UtcNow
+            });
+        }
         await db.SaveChangesAsync();
         logger.LogInformation("Marked current time as happy time.");
     }

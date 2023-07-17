@@ -36,7 +36,10 @@ public class Database
     public async Task SaveChangesAsync()
     {
         var dbFile = await _databaseManager.GetDbLocation();
-        var dbContent = JsonSerializer.Serialize(await GetEvents());
+        var dbContent = JsonSerializer.Serialize(await GetEvents(), new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
         await File.WriteAllTextAsync(dbFile, dbContent);
     }
 }
