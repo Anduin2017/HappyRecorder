@@ -1,6 +1,7 @@
 ﻿using System.CommandLine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Anduin.Framework.Framework;
+using Anduin.CommandFramework.Extensions;
+using Anduin.HappyRecorder.PluginFramework;
 
 namespace Anduin.HappyRecorder.Tests;
 
@@ -41,6 +42,6 @@ public class IntegrationTests
     public async Task InvokeWithoutArg()
     {
         var result = await _program.InvokeAsync(Array.Empty<string>());
-        Assert.AreEqual(1, result);
+        Assert.AreEqual(0, result);
     }
 }

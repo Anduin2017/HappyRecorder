@@ -2,10 +2,10 @@
 
 namespace JAI
 {
-    class Program
+    class ProgramOld
     {
         const string database = "records.json";
-        static async Task Main()
+        static async Task MainOld()
         {
             if (!File.Exists(database))
             {

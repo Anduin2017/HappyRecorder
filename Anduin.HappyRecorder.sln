@@ -9,11 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{18F43B1A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder", "src\Anduin.HappyRecorder\Anduin.HappyRecorder.csproj", "{B7AC49F0-632F-4F32-ACEF-E038E773EF13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.Framework", "src\Anduin.Framework\Anduin.Framework.csproj", "{DEEF4304-E988-4F17-B39E-962CA62A1BAF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Tests", "tests\Anduin.HappyRecorder.Tests\Anduin.HappyRecorder.Tests.csproj", "{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Calendar", "src\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj", "{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.CommandFramework", "src\Anduin.CommandFramework\Anduin.CommandFramework.csproj", "{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.PluginFramework", "src\Anduin.HappyRecorder.PluginFramework\Anduin.HappyRecorder.PluginFramework.csproj", "{7604FE32-8F59-4703-9B8E-5AAF722B4359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +27,6 @@ Global
 		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7AC49F0-632F-4F32-ACEF-E038E773EF13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEEF4304-E988-4F17-B39E-962CA62A1BAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,15 +35,24 @@ Global
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B7AC49F0-632F-4F32-ACEF-E038E773EF13} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
-		{DEEF4304-E988-4F17-B39E-962CA62A1BAF} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F} = {18F43B1A-B2A7-4BE0-B8ED-5CDAF4F1FA58}
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
+		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
+		{7604FE32-8F59-4703-9B8E-5AAF722B4359} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B3D91BA-D157-48F0-B66E-899B29902C2D}

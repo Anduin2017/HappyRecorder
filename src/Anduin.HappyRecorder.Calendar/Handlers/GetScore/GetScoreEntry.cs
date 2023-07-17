@@ -1,4 +1,5 @@
-﻿using Anduin.Framework.Abstracts;
+﻿using Anduin.CommandFramework.Abstracts;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,19 @@ using System.Threading.Tasks;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 
-public class GetScoreEntry : IEntryService
+public class GetScoreEntry
 {
-    public Task OnServiceStartedAsync(string path, bool shouldTakeAction)
+    private readonly ILogger<GetScoreEntry> logger;
+
+    public GetScoreEntry(ILogger<GetScoreEntry> logger)
     {
-        throw new NotImplementedException();
+        this.logger = logger;
+    }
+
+    public Task OnServiceStartedAsync()
+    {
+        Console.WriteLine("Hello!");
+        logger.LogInformation("Hello world!");
+        return Task.CompletedTask;
     }
 }

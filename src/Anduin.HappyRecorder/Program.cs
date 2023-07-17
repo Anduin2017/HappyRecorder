@@ -1,14 +1,24 @@
-using Anduin.Framework.Framework;
+using Anduin.CommandFramework.Extensions;
 using Anduin.HappyRecorder.Calendar;
+using Anduin.HappyRecorder.PluginFramework;
 using System.CommandLine;
 using System.Reflection;
 
-var descriptionAttribute = (Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly()).GetCustomAttribute<AssemblyDescriptionAttribute>()?.Description;
+namespace Anduin.HappyRecorder
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var descriptionAttribute = (Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly()).GetCustomAttribute<AssemblyDescriptionAttribute>()?.Description;
 
-var program = new RootCommand(descriptionAttribute ?? "Unknown usage.")
-    .AddGlobalOptions()
-    .AddPlugins(
-        new CalendarPlugin()
-    );
+            var program = new RootCommand(descriptionAttribute ?? "Unknown usage.")
+                .AddGlobalOptions()
+                .AddPlugins(
+                    new CalendarPlugin()
+                );
 
-return await program.InvokeAsync(args);
+            await program.InvokeAsync(args);
+        }
+    }
+}

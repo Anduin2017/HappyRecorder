@@ -1,6 +1,6 @@
 ﻿using Anduin.HappyRecorder.Calendar.Handlers.GetScore;
-using Anduin.Framework.Abstracts;
-using Anduin.Framework.Framework;
+using Anduin.CommandFramework.Abstracts;
+using Anduin.CommandFramework.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;

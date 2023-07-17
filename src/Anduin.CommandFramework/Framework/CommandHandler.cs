@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-namespace Anduin.Framework.Framework;
+namespace Anduin.CommandFramework.Framework;
 
 public abstract class CommandHandler
 {
@@ -11,7 +11,7 @@ public abstract class CommandHandler
 
     public virtual CommandHandler[] GetSubCommandHandlers() => Array.Empty<CommandHandler>();
 
-    public virtual Option[] GetOptions() => Array.Empty<Option>();
+    public virtual Option[] GetCommandOptions() => Array.Empty<Option>();
 
     public Command BuildAsCommand()
     {
@@ -21,12 +21,12 @@ public abstract class CommandHandler
             command.AddAlias(alias);
         }
 
-        foreach (var option in GetOptions())
+        foreach (var option in GetCommandOptions())
         {
             command.AddOption(option);
         }
 
-        foreach (var subcommand in  GetSubCommandHandlers())
+        foreach (var subcommand in GetSubCommandHandlers())
         {
             command.AddCommand(subcommand.BuildAsCommand());
         }
@@ -38,17 +38,5 @@ public abstract class CommandHandler
 
     public virtual void OnCommandBuilt(Command command)
     {
-        // Set your own options here:
-        // OptionsProvider.PathOptions,
-        // OptionsProvider.DryRunOption,
-        // OptionsProvider.VerboseOption);
-
-        command.SetHandler(Execute);
-    }
-
-    public virtual Task Execute()
-    {
-        Console.WriteLine($"This is the default command action. Please override the method '{nameof(Execute)}' in class '{this.GetType().Name}'.");
-        return Task.CompletedTask;
     }
 }

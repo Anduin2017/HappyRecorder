@@ -1,4 +1,5 @@
-﻿using Anduin.Framework.Abstracts;
+﻿using Anduin.CommandFramework.Abstracts;
+using Anduin.HappyRecorder.Calendar.Handlers.GetScore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Anduin.HappyRecorder.Calendar;
@@ -7,6 +8,6 @@ public class Startup : IStartUp
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        throw new NotImplementedException();
+        services.AddTransient<GetScoreEntry>();
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Anduin.Framework.Abstracts;
+﻿namespace Anduin.CommandFramework.Abstracts;
 
 public interface IEntryService
 {
