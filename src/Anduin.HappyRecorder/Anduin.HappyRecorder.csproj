@@ -20,7 +20,7 @@
 	  <!--Nuget-->
 	  <Company>Aiursoft</Company>
 	  <Product>HappyRecorder</Product>
-	  <Authors>anduin2017</Authors>
+	  <Authors>anduin</Authors>
 	  <Description>A cli tool project helps recorder happy times and reactions.</Description>
 	  <PackageTags>cli nuget dotnet happy</PackageTags>
 	  <RepositoryType>git</RepositoryType>

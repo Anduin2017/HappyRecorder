@@ -8,6 +8,7 @@ public class Startup : IStartUp
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddScoped<Database>();
         services.AddScoped<DatabaseManager>();
         services.AddScoped<CalendarRenderer>();
     }
