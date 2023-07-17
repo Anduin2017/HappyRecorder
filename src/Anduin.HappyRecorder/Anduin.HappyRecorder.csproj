@@ -1,13 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>true</SelfContained>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <PublishReadyToRun>true</PublishReadyToRun>
-    <TargetFramework>net6.0-windows</TargetFramework>
-  <ImplicitUsings>enable</ImplicitUsings>
+	  <!--Build and code-->
+	  <OutputType>Exe</OutputType>
+	  <Version>1.0.0</Version>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <AssemblyName>happy-recorder</AssemblyName>
+	  <RootNamespace>Anduin.HappyRecorder</RootNamespace>
+	  <!--Tool-->
+	  <PackAsTool>true</PackAsTool>
+	  <ToolCommandName>happy-recorder</ToolCommandName>
+	  <!--Best practice-->
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <SelfContained>false</SelfContained>
+	  <PublishTrimmed>false</PublishTrimmed>
+	  <PublishReadyToRun>false</PublishReadyToRun>
+	  <PublishSingleFile>false</PublishSingleFile>
+	  <!--Nuget-->
+	  <Company>Aiursoft</Company>
+	  <Product>HappyRecorder</Product>
+	  <Authors>anduin2017</Authors>
+	  <Description>A cli tool project helps recorder happy times and reactions.</Description>
+	  <PackageTags>cli nuget dotnet happy</PackageTags>
+	  <RepositoryType>git</RepositoryType>
+	  <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/happiness-recorder</RepositoryUrl>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageId>Anduin.HappyRecorder</PackageId>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/happiness-recorder</PackageProjectUrl>
     </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Anduin.HappyRecorder.Core\Anduin.HappyRecorder.Core.csproj" />
+  </ItemGroup>
 
 </Project>

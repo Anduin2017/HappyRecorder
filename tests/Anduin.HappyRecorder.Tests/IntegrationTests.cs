@@ -1,8 +1,8 @@
 ﻿using System.CommandLine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Aiursoft.NiBot.Core.Framework;
+using Anduin.HappyRecorder.Core.Framework;
 
-namespace NiBot.Tests;
+namespace Anduin.HappyRecorder.Tests;
 
 [TestClass]
 public class IntegrationTests
