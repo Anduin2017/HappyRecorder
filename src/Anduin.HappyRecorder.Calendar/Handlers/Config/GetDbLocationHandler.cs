@@ -4,7 +4,6 @@ using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
 using Anduin.HappyRecorder.PluginFramework.Services;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Config;
 
@@ -25,9 +24,8 @@ public class GetDbLocationHandler: CommandHandler
             .BuildServiceProvider();
         
         var db = services.GetRequiredService<DatabaseManager>();
-        var logger = services.GetRequiredService<ILogger<DatabaseManager>>();
 
         var dbLocation = await db.GetDbLocation();
-        logger.LogInformation("{DbLocation}", dbLocation);
+        Console.WriteLine(dbLocation);
     }
 }

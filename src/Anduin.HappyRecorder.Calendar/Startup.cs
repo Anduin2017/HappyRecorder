@@ -11,5 +11,6 @@ public class Startup : IStartUp
         services.AddScoped<Database>();
         services.AddScoped<DatabaseManager>();
         services.AddScoped<CalendarRenderer>();
+        services.AddScoped<Algorithm>();
     }
 }

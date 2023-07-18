@@ -97,21 +97,26 @@ public class DatabaseManager
         }
 
         var newDatabaseLocation = Path.Combine(newLocation, DatabaseFileName);
-
+        var newDbFileAlreadyExists = File.Exists(newDatabaseLocation);
+        
         // Ensure the new database file can be created
-        if (!File.Exists(newDatabaseLocation))
+        if (!newDbFileAlreadyExists)
         {
-            _logger.LogTrace("The database file {NewDatabaseLocation} was not found. Creating it...", newDatabaseLocation);
+            _logger.LogTrace("The new database file {NewDatabaseLocation} was not found. Creating it...", newDatabaseLocation);
             File.Create(newDatabaseLocation).Close();
+        }
+        else
+        {
+            _logger.LogTrace("The new database file {NewDatabaseLocation} already exists. Will not override it", newDatabaseLocation);
         }
 
         _logger.LogTrace("Setting database location to {NewDatabaseLocation} in config file", newDatabaseLocation);
         await SetConfigFileContent(newDatabaseLocation);
 
         // Migrate the database to the new location
-        if (File.Exists(oldDbLocation))
+        if (File.Exists(oldDbLocation) && !newDbFileAlreadyExists)
         {
-            _logger.LogTrace("Migrating database from {OldDbLocation} to {NewDatabaseLocation}", oldDbLocation, newDatabaseLocation);
+            _logger.LogTrace("Migrating database from {OldDbLocation} to {NewDatabaseLocation}, since new db file was not found", oldDbLocation, newDatabaseLocation);
             var oldDb = await File.ReadAllTextAsync(oldDbLocation);
             await File.WriteAllTextAsync(newDatabaseLocation, oldDb);
             
