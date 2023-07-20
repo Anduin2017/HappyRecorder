@@ -1,28 +1,42 @@
-# 某种不可描述的统计器
+# Anduin's Happy Recorder
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.cn/anduin/HappyRecorder/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.cn/anduin/HappyRecorder/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/pipelines)
 [![NuGet version (Anduin.HappyRecorder)](https://img.shields.io/nuget/v/Anduin.HappyRecorder.svg)](https://www.nuget.org/packages/Anduin.HappyRecorder/)
 
-这个项目通过一些简单的数学模型，通过记录你每次感受快乐的时间，计算你的当前身体状态。从而帮助用户订立科学健康的行为周期，避免身体的过度消耗。。。
+This project uses some simple mathematical models to calculate your current physical state by recording the time when you have happy each time. It helps users establish a scientifically healthy behavior cycle and avoid excessive physical consumption.
 
-（当然，整个项目完全就是一个玩笑……我总共花了半个下午就写完了。。其实我坦白我只是想找个乐子而已……）
+## Install
 
-## 如何运行
+Run the following command to install this tool:
 
-直接用 Visual Studio 双击打开，F5 运行即可。
+```bash
+dotnet tool install --global Anduin.HappyRecorder
+```
 
-或者你可以自己用 .NET SDK 把它编译成exe来用。
+## Usage
 
-建议把它直接扔进 OneDrive 里，数据就不会丢啦~
+After getting the binary, run it directly in the terminal.
 
-## 如何使用
+```bash
+$ happy-recorder
+Description:
+  A cli tool project helps recorder happy times and reactions.
 
-每次你需要记忆一些生活中的舒适事件时，打开它，按下A键即可。
+Usage:
+  happy-recorder [command] [options]
 
-如果你只需要查询一下，你当前的身体状态如何，打开它，按下N键即可。
+Options:
+  -d, --dry-run   Preview changes without actually making them
+  -v, --verbose   Show detailed log
+  --version       Show version information
+  -?, -h, --help  Show help and usage information
 
-## 注意事项
+Commands:
+  get     Database result fetcher.
+  mark    Add a new happy record to the database.
+  config  Configuration management.
+```
 
-刚刚开始用的时候，由于没有历史数据，会不太准。
+It will fetch all videos under that folder, and try to re-encode it with ffmpeg.
