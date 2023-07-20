@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.Calendar", "src\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj", "{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aiursoft.CommandFramework", "src\Aiursoft.CommandFramework\Aiursoft.CommandFramework.csproj", "{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anduin.HappyRecorder.PluginFramework", "src\Anduin.HappyRecorder.PluginFramework\Anduin.HappyRecorder.PluginFramework.csproj", "{7604FE32-8F59-4703-9B8E-5AAF722B4359}"
 EndProject
 Global
@@ -35,10 +33,6 @@ Global
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7604FE32-8F59-4703-9B8E-5AAF722B4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,7 +45,6 @@ Global
 		{B7AC49F0-632F-4F32-ACEF-E038E773EF13} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 		{DA5625B9-FD6C-44B3-931F-4B2DA84F973F} = {18F43B1A-B2A7-4BE0-B8ED-5CDAF4F1FA58}
 		{85ECDF7F-2BA1-4923-B13E-B05328CF94DA} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
-		{11D2DF31-1AF3-422C-9891-B0CBF8C863A4} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 		{7604FE32-8F59-4703-9B8E-5AAF722B4359} = {1853660A-713B-475B-BCFA-1F7D6BC96D22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
