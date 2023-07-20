@@ -14,7 +14,8 @@ public class GetHandler : CommandHandler
         {
             new ScoreHandler(),
             new HistoryHandler(),
-            new CalendarHandler()
+            new CalendarHandler(),
+            new FeelingHandler()
         };
     }
 }

@@ -13,7 +13,8 @@ public class MarkHandler : CommandHandler
         return new CommandHandler[]
         {
             new NowHandler(),
-            new TimeHandler()
+            new TimeHandler(),
+            new AgoHandler()
         };
     }
 }
