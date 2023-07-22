@@ -25,7 +25,7 @@ public class ScoreHandler : CommandHandler
             .BuildServiceProvider();
         
         var algorithm = services.GetRequiredService<Algorithm>();
-        var score = await algorithm.GetPoints(false);
+        var score = await algorithm.GetPoints(false, DateTime.Now);
         Console.WriteLine($"{score:0.00}");
     }
 }

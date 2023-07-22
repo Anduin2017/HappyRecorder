@@ -15,9 +15,9 @@ public class Algorithm
         _database = database;
     }
     
-    public async Task<double> GetPoints(bool showHistory)
+    public async Task<double> GetPoints(bool showHistory, DateTime measureTime)
     {
-        var recordsObjects = (await _database.GetEvents());
+        var recordsObjects = (await _database.GetEvents()).Where(e => e.HappenTime < measureTime);
         var totalPoints = 100.0;
         var lastCalculatingPoint = DateTime.MinValue;
         foreach (var record in recordsObjects.OrderBy(t => t.HappenTime))
@@ -43,7 +43,7 @@ public class Algorithm
             lastCalculatingPoint = record.HappenTime;
         }
 
-        var finalElapsed = DateTime.Now - lastCalculatingPoint;
+        var finalElapsed = measureTime - lastCalculatingPoint;
         var pointsLast = GetPointsFromWaitingTime(finalElapsed);
         totalPoints = AddScore(totalPoints, pointsLast);
 

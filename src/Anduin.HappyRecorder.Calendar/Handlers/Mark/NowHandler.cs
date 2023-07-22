@@ -38,7 +38,7 @@ public class NowHandler : CommandHandler
             logger.LogInformation("Adding new event");
             events.Add(new Event
             {
-                HappenTime = DateTime.UtcNow
+                HappenTime = DateTime.Now
             });
         }
         await db.SaveChangesAsync();

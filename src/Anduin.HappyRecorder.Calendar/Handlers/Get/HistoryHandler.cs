@@ -25,6 +25,6 @@ public class HistoryHandler : CommandHandler
             .BuildServiceProvider();
         
         var algorithm = services.GetRequiredService<Algorithm>();
-        await algorithm.GetPoints(true);
+        await algorithm.GetPoints(true, DateTime.Now);
     }
 }

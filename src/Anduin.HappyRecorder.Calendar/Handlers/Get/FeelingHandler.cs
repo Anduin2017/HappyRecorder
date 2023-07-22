@@ -27,7 +27,7 @@ public class FeelingHandler : CommandHandler
             .BuildServiceProvider();
 
         var algorithm = services.GetRequiredService<Algorithm>();
-        var score = await algorithm.GetPoints(false);
+        var score = await algorithm.GetPoints(false, DateTime.Now);
         var feeling = GetFeeling(score);
         Console.WriteLine(feeling);
     }

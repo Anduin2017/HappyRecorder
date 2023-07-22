@@ -18,14 +18,13 @@ public class CalendarHandler : CommandHandler
         command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
     }
 
-    private Task Execute(bool verbose)
+    private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)
             .BuildServiceProvider();
         
         var calendar = services.GetRequiredService<CalendarRenderer>();
-        calendar.Render();
-        return Task.CompletedTask;
+        await calendar.Render();
     }
 }

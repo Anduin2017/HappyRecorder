@@ -49,7 +49,7 @@ public class AgoHandler : CommandHandler
             logger.LogInformation("Adding new event");
             events.Add(new Event
             {
-                HappenTime = DateTime.UtcNow.AddMinutes(-1 * minutes)
+                HappenTime = DateTime.Now.AddMinutes(-1 * minutes)
             });
         }
 
