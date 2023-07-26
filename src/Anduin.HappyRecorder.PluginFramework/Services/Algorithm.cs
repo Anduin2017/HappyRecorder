@@ -31,7 +31,7 @@ public class Algorithm
             var pointsLater = WastePoint(totalPoints);
             if (showHistory)
             {
-                _logger.LogInformation("Event in DB, at {RecordHappenTime}. {TotalPoints} -> {PointsLater}", record.HappenTime, totalPoints.ToString("N1"), pointsLater.ToString("N1"));
+                Console.WriteLine($"Event in DB, at {record.HappenTime}. {totalPoints:N1} -> {pointsLater:N1}");
             }
             else
             {
