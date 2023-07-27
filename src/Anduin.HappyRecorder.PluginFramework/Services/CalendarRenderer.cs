@@ -15,6 +15,9 @@ public class CalendarRenderer
 
     public async Task Render()
     {
+        WriteAsciiDick();
+        Console.WriteLine();
+
         var now = DateTime.Now;
         var firstDayOfMonth = new DateTime(now.Year, now.Month, 1);
         var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
@@ -97,5 +100,19 @@ public class CalendarRenderer
             return ConsoleColor.DarkGray;
         else
             throw new InvalidOperationException();
+    }
+
+    private static void WriteAsciiDick()
+    {
+        var dick = @"
+//  7        KARMA WILL GET YOU
+(_,_/\
+ \    \      MEANWHILE THIS GAY ASCII DICK
+  \    \
+  _\    \__  MAKES GOOD COMPANY
+ (   \     )
+  \___\___/";
+
+        Console.WriteLine(dick);
     }
 }
