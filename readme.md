@@ -38,5 +38,3 @@ Commands:
   mark    Add a new happy record to the database.
   config  Configuration management.
 ```
-
-It will fetch all videos under that folder, and try to re-encode it with ffmpeg.
