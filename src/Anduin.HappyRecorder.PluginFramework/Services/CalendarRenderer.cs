@@ -71,31 +71,23 @@ public class CalendarRenderer
         return score;
     }
 
-    private ConsoleColor GetOutputColorFromScore(double score)
+    private static ConsoleColor GetOutputColorFromScore(double score)
     {
-        // From 0-50, return red to yellow.
-        // From 50-100, return yellow to green.
-        if (score >= 90)
-            return ConsoleColor.Green;
-        else if (score >= 80)
-            return ConsoleColor.DarkGreen;
-        else if (score >= 70)
-            return ConsoleColor.DarkYellow;
-        else if (score >= 60)
-            return ConsoleColor.Yellow;
-        else if (score >= 50)
-            return ConsoleColor.Magenta;
-        else if (score >= 40)
-            return ConsoleColor.DarkMagenta;
-        else if (score >= 30)
-            return ConsoleColor.DarkRed;
-        else if (score >= 20)
-            return ConsoleColor.Red;
-        else if (score >= 10)
-            return ConsoleColor.Gray;
-        else if (score >= 0)
-            return ConsoleColor.DarkGray;
-        else
-            throw new InvalidOperationException();
+        return score switch
+        {
+            // From 0-50, return red to yellow.
+            // From 50-100, return yellow to green.
+            >= 90 => ConsoleColor.Green,
+            >= 80 => ConsoleColor.DarkGreen,
+            >= 70 => ConsoleColor.DarkYellow,
+            >= 60 => ConsoleColor.Yellow,
+            >= 50 => ConsoleColor.Magenta,
+            >= 40 => ConsoleColor.DarkMagenta,
+            >= 30 => ConsoleColor.DarkRed,
+            >= 20 => ConsoleColor.Red,
+            >= 10 => ConsoleColor.Gray,
+            >= 0 => ConsoleColor.DarkGray,
+            _ => throw new InvalidOperationException()
+        };
     }
 }

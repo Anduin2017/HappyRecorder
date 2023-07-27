@@ -8,11 +8,7 @@ public class Database
     private readonly DatabaseManager _databaseManager;
     private List<Event>? _db;
 
-    public Database(DatabaseManager databaseManager)
-    {
-        _databaseManager = databaseManager;
-    }
-
+    public Database(DatabaseManager databaseManager) => _databaseManager = databaseManager;
 
     public async Task<List<Event>> GetEvents()
     {
