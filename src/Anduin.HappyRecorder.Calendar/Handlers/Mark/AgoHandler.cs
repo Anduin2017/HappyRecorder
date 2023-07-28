@@ -34,7 +34,7 @@ public class AgoHandler : CommandHandler
             _minutesOption);
     }
 
-    private async Task Execute(bool verbose, bool dryRun, int minutes)
+    private static async Task Execute(bool verbose, bool dryRun, int minutes)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)

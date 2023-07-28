@@ -23,7 +23,7 @@ public class NowHandler : CommandHandler
             CommonOptionsProvider.DryRunOption);
     }
 
-    private async Task Execute(bool verbose, bool dryRun)
+    private static async Task Execute(bool verbose, bool dryRun)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)

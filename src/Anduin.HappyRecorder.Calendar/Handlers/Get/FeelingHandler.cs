@@ -32,29 +32,21 @@ public class FeelingHandler : CommandHandler
         Console.WriteLine(feeling);
     }
     
-    private string GetFeeling(double score)
+    private static string GetFeeling(double score)
     {
-        if (score >= 90)
-            return "ideal";
-        else if (score >= 80)
-            return "excellent";
-        else if (score >= 70)
-            return "awesome";
-        else if (score >= 60)
-            return "good";
-        else if (score >= 50)
-            return "acceptable";
-        else if (score >= 40)
-            return "tired";
-        else if (score >= 30)
-            return "very hard to accept";
-        else if (score >= 20)
-            return "bad";
-        else if (score >= 10)
-            return "shit";
-        else if (score >= 0)
-            return "about to die...";
-        else
-            throw new InvalidOperationException();
+        return score switch
+        {
+            >= 90 => "ideal",
+            >= 80 => "excellent",
+            >= 70 => "awesome",
+            >= 60 => "good",
+            >= 50 => "acceptable",
+            >= 40 => "tired",
+            >= 30 => "very hard to accept",
+            >= 20 => "bad",
+            >= 10 => "shit",
+            >= 0 => "about to die...",
+            _ => throw new InvalidOperationException()
+        };
     }
 }

@@ -34,7 +34,7 @@ public class TimeHandler : CommandHandler
             _timeOption);
     }
 
-    private async Task Execute(bool verbose, bool dryRun, DateTime time)
+    private static async Task Execute(bool verbose, bool dryRun, DateTime time)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)

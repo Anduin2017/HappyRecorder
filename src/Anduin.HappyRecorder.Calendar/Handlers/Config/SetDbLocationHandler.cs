@@ -24,7 +24,7 @@ public class SetDbLocationHandler : CommandHandler
             CommonOptionsProvider.PathOptions);
     }
 
-    private async Task Execute(bool verbose, string path)
+    private static async Task Execute(bool verbose, string path)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)

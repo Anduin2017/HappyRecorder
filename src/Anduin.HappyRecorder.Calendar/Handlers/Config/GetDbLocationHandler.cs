@@ -17,7 +17,7 @@ public class GetDbLocationHandler: CommandHandler
         command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
     }
 
-    private async Task Execute(bool verbose)
+    private static async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
             .BuildServices<Startup>(verbose)
