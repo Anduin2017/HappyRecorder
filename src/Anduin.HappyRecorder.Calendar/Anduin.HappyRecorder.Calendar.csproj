@@ -1,13 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Anduin.HappyRecorder.PluginFramework\Anduin.HappyRecorder.PluginFramework.csproj" />
-  </ItemGroup>
-
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Anduin.HappyRecorder.Calendar</AssemblyName>
+        <RootNamespace>Anduin.HappyRecorder.Calendar</RootNamespace>
+        <IsTestProject>false</IsTestProject>
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Anduin.HappyRecorder.PluginFramework\Anduin.HappyRecorder.PluginFramework.csproj" />
+    </ItemGroup>
 </Project>
