@@ -80,9 +80,9 @@ public class CalendarRenderer
         else if (score >= 80)
             return ConsoleColor.DarkGreen;
         else if (score >= 70)
-            return ConsoleColor.DarkYellow;
-        else if (score >= 60)
             return ConsoleColor.Yellow;
+        else if (score >= 60)
+            return ConsoleColor.DarkYellow;
         else if (score >= 50)
             return ConsoleColor.Magenta;
         else if (score >= 40)
