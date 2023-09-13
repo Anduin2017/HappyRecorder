@@ -2,6 +2,7 @@
 using Aiursoft.CommandFramework.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Anduin.HappyRecorder.PluginFramework.Services.PluginFramework;
+using Anduin.HappyRecorder.Calendar;
 
 namespace Anduin.HappyRecorder.PluginFramework.Services.Tests;
 
@@ -14,7 +15,7 @@ public class IntegrationTests
     {
         _program = new RootCommand("Test env.")
             .AddGlobalOptions()
-            .AddPlugins();
+            .AddPlugins(new CalendarPlugin());
     }
 
     [TestMethod]
@@ -42,6 +43,6 @@ public class IntegrationTests
     public async Task InvokeWithoutArg()
     {
         var result = await _program.InvokeAsync(Array.Empty<string>());
-        Assert.AreEqual(0, result);
+        Assert.AreEqual(1, result);
     }
 }
