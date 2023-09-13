@@ -9,6 +9,10 @@ This project uses some simple mathematical models to calculate your current phys
 
 ## Install
 
+Requirements:
+
+1. [.NET 7 SDK](http://dot.net/)
+
 Run the following command to install this tool:
 
 ```bash
