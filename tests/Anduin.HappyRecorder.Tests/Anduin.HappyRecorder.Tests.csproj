@@ -2,7 +2,7 @@
     <PropertyGroup>
         <OutputType>Library</OutputType>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>Aiursoft.NiBot.Tests</RootNamespace>
+        <RootNamespace>Anduin.HappyRecorder.Tests</RootNamespace>
         <IsTestProject>true</IsTestProject>
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>
