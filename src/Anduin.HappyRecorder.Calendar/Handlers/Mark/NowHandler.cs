@@ -26,8 +26,8 @@ public class NowHandler : CommandHandler
     private async Task Execute(bool verbose, bool dryRun)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
 
         var db = services.GetRequiredService<Database>();
         var logger = services.GetRequiredService<ILogger<NowHandler>>();

@@ -20,8 +20,8 @@ public class GetDbLocationHandler: CommandHandler
     private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
         
         var db = services.GetRequiredService<DatabaseManager>();
 

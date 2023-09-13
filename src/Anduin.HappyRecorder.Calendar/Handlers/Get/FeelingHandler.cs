@@ -23,8 +23,8 @@ public class FeelingHandler : CommandHandler
     private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
 
         var algorithm = services.GetRequiredService<Algorithm>();
         var score = await algorithm.GetPoints(false, DateTime.Now);

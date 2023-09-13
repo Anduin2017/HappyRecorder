@@ -21,8 +21,8 @@ public class CalendarHandler : CommandHandler
     private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
         
         var calendar = services.GetRequiredService<CalendarRenderer>();
         await calendar.Render();

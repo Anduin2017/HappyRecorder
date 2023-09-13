@@ -21,8 +21,8 @@ public class HistoryHandler : CommandHandler
     private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
         
         var algorithm = services.GetRequiredService<Algorithm>();
         await algorithm.GetPoints(true, DateTime.Now);

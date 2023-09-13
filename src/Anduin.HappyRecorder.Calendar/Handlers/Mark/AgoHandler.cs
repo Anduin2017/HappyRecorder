@@ -37,8 +37,8 @@ public class AgoHandler : CommandHandler
     private async Task Execute(bool verbose, bool dryRun, int minutes)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
 
         var db = services.GetRequiredService<Database>();
         var logger = services.GetRequiredService<ILogger<NowHandler>>();

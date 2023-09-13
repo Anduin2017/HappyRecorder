@@ -37,8 +37,8 @@ public class TimeHandler : CommandHandler
     private async Task Execute(bool verbose, bool dryRun, DateTime time)
     {
         var services = ServiceBuilder
-            .BuildServices<Startup>(verbose)
-            .BuildServiceProvider();
+            .BuildHost<Startup>(verbose)
+            .Build().Services;
 
         var db = services.GetRequiredService<Database>();
         var logger = services.GetRequiredService<ILogger<NowHandler>>();
