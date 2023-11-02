@@ -18,7 +18,9 @@ public class IntegrationTests
             {
                 command
                     .AddGlobalOptions()
-                    .AddPlugins(new CalendarPlugin());
+                    .AddPlugins(
+                        new CalendarPlugin()
+                    );
             });
     }
 

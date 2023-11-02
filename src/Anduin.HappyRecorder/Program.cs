@@ -8,6 +8,8 @@ return await new AiursoftCommand()
     {
         command
             .AddGlobalOptions()
-            .AddPlugins(new CalendarPlugin());
+            .AddPlugins(
+                new CalendarPlugin()
+            );
     })
     .RunAsync(args);
