@@ -1,33 +1,37 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <Version>7.0.0</Version>
-        <TargetFramework>net7.0</TargetFramework>
-        <AssemblyName>happy-recorder</AssemblyName>
-        <RootNamespace>Anduin.HappyRecorder</RootNamespace>
-        <IsTestProject>false</IsTestProject>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <IsPackable>true</IsPackable>
-        <PackAsTool>true</PackAsTool>
-        <ToolCommandName>happy-recorder</ToolCommandName>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <SelfContained>false</SelfContained>
-        <PublishTrimmed>false</PublishTrimmed>
-        <PublishReadyToRun>false</PublishReadyToRun>
-        <PublishSingleFile>false</PublishSingleFile>
-        <Company>Aiursoft</Company>
-        <Product>HappyRecorder</Product>
-        <Authors>anduin</Authors>
-        <Description>A cli tool project helps recording happy times and reactions.</Description>
-        <PackageId>Anduin.HappyRecorder</PackageId>
-        <PackageTags>cli nuget dotnet happy</PackageTags>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</PackageProjectUrl>
-        <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</RepositoryUrl>
-    </PropertyGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj" />
-    </ItemGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Version>7.0.1</Version>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyName>happy-recorder</AssemblyName>
+    <RootNamespace>Anduin.HappyRecorder</RootNamespace>
+    <IsTestProject>false</IsTestProject>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>happy-recorder</ToolCommandName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SelfContained>false</SelfContained>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <PublishSingleFile>false</PublishSingleFile>
+    <Company>Aiursoft</Company>
+    <Product>HappyRecorder</Product>
+    <Authors>anduin</Authors>
+    <Description>A cli tool project helps recording happy times and reactions.</Description>
+    <PackageId>Anduin.HappyRecorder</PackageId>
+    <PackageTags>cli nuget dotnet happy</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="." />
+  </ItemGroup>
 </Project>
