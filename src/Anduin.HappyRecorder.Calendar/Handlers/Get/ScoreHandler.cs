@@ -21,7 +21,7 @@ public class ScoreHandler : CommandHandler
     private async Task Execute(bool verbose)
     {
         var services = ServiceBuilder
-            .BuildHost<Startup>(verbose)
+            .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;
         
         var algorithm = services.GetRequiredService<Algorithm>();
