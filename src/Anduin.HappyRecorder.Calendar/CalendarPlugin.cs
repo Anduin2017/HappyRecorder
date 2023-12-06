@@ -1,5 +1,4 @@
 ﻿using Aiursoft.CommandFramework.Abstracts;
-using Aiursoft.CommandFramework.Framework;
 using Anduin.HappyRecorder.Calendar.Handlers.Config;
 using Anduin.HappyRecorder.Calendar.Handlers.Get;
 using Anduin.HappyRecorder.Calendar.Handlers.Mark;
@@ -8,9 +7,9 @@ namespace Anduin.HappyRecorder.Calendar;
 
 public class CalendarPlugin : IPlugin
 {
-    public CommandHandler[] Install()
+    public ICommandHandlerBuilder[] Install()
     {
-        return new CommandHandler[]
+        return new ICommandHandlerBuilder[]
         {
             new GetHandler(),
             new MarkHandler(),

@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+﻿using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -7,18 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Config;
 
-public class GetDbLocationHandler: CommandHandler
+public class GetDbLocationHandler: ExecutableCommandHandlerBuilder
 {
     public override string Name => "get-db-location";
     public override string Description => "Get current program's database file location.";
 
-    public override void OnCommandBuilt(Command command)
+    protected override async Task Execute(InvocationContext context)
     {
-        command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
-    }
-
-    private async Task Execute(bool verbose)
-    {
+        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
+        
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

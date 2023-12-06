@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+﻿using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
-public class FeelingHandler : CommandHandler
+public class FeelingHandler : ExecutableCommandHandlerBuilder
 {
     public override string Name => "feeling";
 
@@ -15,13 +15,9 @@ public class FeelingHandler : CommandHandler
 
     public override string[] Alias => new[] { "feel" };
 
-    public override void OnCommandBuilt(Command command)
+    protected override async Task Execute(InvocationContext context)
     {
-        command.SetHandler(Execute, CommonOptionsProvider.VerboseOption);
-    }
-
-    private async Task Execute(bool verbose)
-    {
+        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

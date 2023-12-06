@@ -2,15 +2,15 @@
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
-public class GetHandler : CommandHandler
+public class GetHandler : NavigationCommandHandlerBuilder
 {
     public override string Name => "get";
 
     public override string Description => "Database result fetcher.";
 
-    public override CommandHandler[] GetSubCommandHandlers()
+    public override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandler[]
+        return new CommandHandlerBuilder[]
         {
             new ScoreHandler(),
             new HistoryHandler(),

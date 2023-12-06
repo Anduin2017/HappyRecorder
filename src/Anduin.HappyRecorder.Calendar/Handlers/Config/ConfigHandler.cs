@@ -2,15 +2,15 @@
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Config;
 
-public class ConfigHandler : CommandHandler
+public class ConfigHandler : NavigationCommandHandlerBuilder
 {
     public override string Name => "config";
 
     public override string Description => "Configuration management.";
 
-    public override CommandHandler[] GetSubCommandHandlers()
+    public override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandler[]
+        return new CommandHandlerBuilder[]
         {
             new GetDbLocationHandler(),
             new SetDbLocationHandler()

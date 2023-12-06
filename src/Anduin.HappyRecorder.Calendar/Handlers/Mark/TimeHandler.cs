@@ -1,4 +1,5 @@
 ﻿using System.CommandLine;
+using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -9,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
-public class TimeHandler : CommandHandler
+public class TimeHandler : ExecutableCommandHandlerBuilder
 {
     public override string Name => "time";
 
@@ -25,17 +26,11 @@ public class TimeHandler : CommandHandler
         _timeOption
     };
 
-    public override void OnCommandBuilt(Command command)
+    protected override async Task Execute(InvocationContext context)
     {
-        command.SetHandler(
-            Execute,
-            CommonOptionsProvider.VerboseOption,
-            CommonOptionsProvider.DryRunOption,
-            _timeOption);
-    }
-
-    private async Task Execute(bool verbose, bool dryRun, DateTime time)
-    {
+        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
+        var dryRun = context.ParseResult.GetValueForOption(CommonOptionsProvider.DryRunOption);
+        var time = context.ParseResult.GetValueForOption(_timeOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

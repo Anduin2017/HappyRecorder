@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+﻿using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -9,22 +9,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
-public class NowHandler : CommandHandler
+public class NowHandler : ExecutableCommandHandlerBuilder
 {
     public override string Name => "now";
 
     public override string Description => "Mark current time as happy time.";
 
-    public override void OnCommandBuilt(Command command)
+    protected override async Task Execute(InvocationContext context)
     {
-        command.SetHandler(
-            Execute, 
-            CommonOptionsProvider.VerboseOption, 
-            CommonOptionsProvider.DryRunOption);
-    }
-
-    private async Task Execute(bool verbose, bool dryRun)
-    {
+        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
+        var dryRun = context.ParseResult.GetValueForOption(CommonOptionsProvider.DryRunOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

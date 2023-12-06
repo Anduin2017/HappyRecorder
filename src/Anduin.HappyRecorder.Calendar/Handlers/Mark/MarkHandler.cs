@@ -2,15 +2,15 @@
 
 namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
-public class MarkHandler : CommandHandler
+public class MarkHandler : NavigationCommandHandlerBuilder
 {
     public override string Name => "mark";
 
     public override string Description => "Add a new happy record to the database.";
 
-    public override CommandHandler[] GetSubCommandHandlers()
+    public override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandler[]
+        return new CommandHandlerBuilder[]
         {
             new NowHandler(),
             new TimeHandler(),
