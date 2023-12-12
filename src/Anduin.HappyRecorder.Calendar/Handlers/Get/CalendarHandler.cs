@@ -9,9 +9,9 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
 public class CalendarHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "calendar";
+    protected  override string Name => "calendar";
 
-    public override string Description => "Show score calendar.";
+    protected  override string Description => "Show score calendar.";
 
     protected override async Task Execute(InvocationContext context)
     {

@@ -9,9 +9,9 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
 public class ScoreHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "score";
+    protected  override string Name => "score";
 
-    public override string Description => "Show current happiness score.";
+    protected  override string Description => "Show current happiness score.";
     
     protected override async Task Execute(InvocationContext context)
     {

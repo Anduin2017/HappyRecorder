@@ -1,28 +1,17 @@
 ﻿using Aiursoft.CommandFramework;
-using Aiursoft.CommandFramework.Extensions;
+using Aiursoft.CommandFramework.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Anduin.HappyRecorder.PluginFramework.Services.PluginFramework;
-using Anduin.HappyRecorder.Calendar;
+using Anduin.HappyRecorder.Calendar.Handlers.Get;
 
 namespace Anduin.HappyRecorder.PluginFramework.Services.Tests;
 
 [TestClass]
 public class IntegrationTests
 {
-    private readonly AiursoftCommandApp _program;
-
-    public IntegrationTests()
-    {
-        _program = new AiursoftCommandApp()
-            .Configure(command =>
-            {
-                command
-                    .AddGlobalOptions()
-                    .AddPlugins(
-                        new CalendarPlugin()
-                    );
-            });
-    }
+    private readonly NestedCommandApp _program = new NestedCommandApp()
+        .WithFeature(new CalendarHandler())
+        .WithGlobalOptions(CommonOptionsProvider.DryRunOption)
+        .WithGlobalOptions(CommonOptionsProvider.VerboseOption);
 
     [TestMethod]
     public async Task InvokeHelp()

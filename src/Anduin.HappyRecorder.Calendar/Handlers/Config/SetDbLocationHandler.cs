@@ -10,10 +10,10 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Config;
 
 public class SetDbLocationHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "set-db-location";
-    public override string Description => "Set current program's database file location.";
+    protected  override string Name => "set-db-location";
+    protected  override string Description => "Set current program's database file location.";
     
-    public override Option[] GetCommandOptions() => new Option[]
+    protected  override Option[] GetCommandOptions() => new Option[]
     {
         CommonOptionsProvider.PathOptions
     };

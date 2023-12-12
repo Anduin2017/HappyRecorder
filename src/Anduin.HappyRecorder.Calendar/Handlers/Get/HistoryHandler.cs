@@ -9,9 +9,9 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
 public class HistoryHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "history";
+    protected  override string Name => "history";
 
-    public override string Description => "Show happy history.";
+    protected  override string Description => "Show happy history.";
 
     protected override async Task Execute(InvocationContext context)
     {

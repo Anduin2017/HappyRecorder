@@ -9,11 +9,11 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Get;
 
 public class FeelingHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "feeling";
+    protected  override string Name => "feeling";
 
-    public override string Description => "Show current feeling.";
+    protected  override string Description => "Show current feeling.";
 
-    public override string[] Alias => new[] { "feel" };
+    protected  override string[] Alias => new[] { "feel" };
 
     protected override async Task Execute(InvocationContext context)
     {

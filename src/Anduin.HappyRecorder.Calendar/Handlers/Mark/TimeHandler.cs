@@ -12,16 +12,16 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
 public class TimeHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "time";
+    protected  override string Name => "time";
 
-    public override string Description => "Mark specific time as happy time.";
+    protected  override string Description => "Mark specific time as happy time.";
     
     private readonly Option<DateTime> _timeOption = new(new[] { "-t", "--time" }, "Time string about when you triggered.")
     {
         IsRequired = true
     };
 
-    public override Option[] GetCommandOptions() => new Option[]
+    protected  override Option[] GetCommandOptions() => new Option[]
     {
         _timeOption
     };

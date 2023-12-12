@@ -9,8 +9,8 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Config;
 
 public class GetDbLocationHandler: ExecutableCommandHandlerBuilder
 {
-    public override string Name => "get-db-location";
-    public override string Description => "Get current program's database file location.";
+    protected  override string Name => "get-db-location";
+    protected  override string Description => "Get current program's database file location.";
 
     protected override async Task Execute(InvocationContext context)
     {

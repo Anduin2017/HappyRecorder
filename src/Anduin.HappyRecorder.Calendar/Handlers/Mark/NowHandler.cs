@@ -11,9 +11,9 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
 public class NowHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "now";
+    protected  override string Name => "now";
 
-    public override string Description => "Mark current time as happy time.";
+    protected  override string Description => "Mark current time as happy time.";
 
     protected override async Task Execute(InvocationContext context)
     {

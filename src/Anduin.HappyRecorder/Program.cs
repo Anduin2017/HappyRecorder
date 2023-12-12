@@ -1,15 +1,13 @@
-using Anduin.HappyRecorder.PluginFramework.Services.PluginFramework;
 using Aiursoft.CommandFramework;
-using Aiursoft.CommandFramework.Extensions;
-using Anduin.HappyRecorder.Calendar;
+using Aiursoft.CommandFramework.Models;
+using Anduin.HappyRecorder.Calendar.Handlers.Config;
+using Anduin.HappyRecorder.Calendar.Handlers.Get;
+using Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
-return await new AiursoftCommandApp()
-    .Configure(command =>
-    {
-        command
-            .AddGlobalOptions()
-            .AddPlugins(
-                new CalendarPlugin()
-            );
-    })
+return await new NestedCommandApp()
+    .WithFeature(new GetHandler())
+    .WithFeature(new MarkHandler())
+    .WithFeature(new ConfigHandler())
+    .WithGlobalOptions(CommonOptionsProvider.DryRunOption)
+    .WithGlobalOptions(CommonOptionsProvider.VerboseOption)
     .RunAsync(args);

@@ -12,16 +12,16 @@ namespace Anduin.HappyRecorder.Calendar.Handlers.Mark;
 
 public class AgoHandler : ExecutableCommandHandlerBuilder
 {
-    public override string Name => "ago";
+    protected  override string Name => "ago";
 
-    public override string Description => "Mark past time as happy.";
+    protected  override string Description => "Mark past time as happy.";
 
     private readonly Option<int> _minutesOption = new(new[] { "-m", "--minutes" }, "How many minutes ago to be marked as happy.")
     {
         IsRequired = true
     };
 
-    public override Option[] GetCommandOptions() => new Option[]
+    protected  override Option[] GetCommandOptions() => new Option[]
     {
         _minutesOption
     };
