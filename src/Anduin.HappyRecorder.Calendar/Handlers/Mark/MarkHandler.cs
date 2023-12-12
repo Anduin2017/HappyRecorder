@@ -8,7 +8,7 @@ public class MarkHandler : NavigationCommandHandlerBuilder
 
     protected  override string Description => "Add a new happy record to the database.";
 
-    public override CommandHandlerBuilder[] GetSubCommandHandlers()
+    protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
         return new CommandHandlerBuilder[]
         {

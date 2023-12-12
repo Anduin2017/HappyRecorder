@@ -8,7 +8,7 @@ public class GetHandler : NavigationCommandHandlerBuilder
 
     protected  override string Description => "Database result fetcher.";
 
-    public override CommandHandlerBuilder[] GetSubCommandHandlers()
+    protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
         return new CommandHandlerBuilder[]
         {

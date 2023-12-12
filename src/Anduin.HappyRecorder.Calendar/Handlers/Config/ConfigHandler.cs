@@ -8,7 +8,7 @@ public class ConfigHandler : NavigationCommandHandlerBuilder
 
     protected  override string Description => "Configuration management.";
 
-    public override CommandHandlerBuilder[] GetSubCommandHandlers()
+    protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
         return new CommandHandlerBuilder[]
         {
