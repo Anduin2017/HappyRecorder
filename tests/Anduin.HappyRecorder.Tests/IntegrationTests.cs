@@ -1,9 +1,9 @@
 ﻿using Aiursoft.CommandFramework;
 using Aiursoft.CommandFramework.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Anduin.HappyRecorder.Calendar.Handlers.Get;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Anduin.HappyRecorder.PluginFramework.Services.Tests;
+namespace Anduin.HappyRecorder.Tests;
 
 [TestClass]
 public class IntegrationTests
