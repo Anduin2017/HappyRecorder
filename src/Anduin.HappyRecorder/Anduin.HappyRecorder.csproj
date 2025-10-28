@@ -23,9 +23,9 @@
     <PackageId>Anduin.HappyRecorder</PackageId>
     <PackageTags>cli nuget dotnet happy</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</PackageProjectUrl>
+    <PackageProjectUrl>https://gitlab.aiursoft.com/Anduin/HappyRecorder</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://gitlab.aiursoft.cn/Anduin/HappyRecorder</RepositoryUrl>
+    <RepositoryUrl>https://gitlab.aiursoft.com/Anduin/HappyRecorder</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>

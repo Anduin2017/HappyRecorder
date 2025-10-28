@@ -1,10 +1,10 @@
 # Anduin's Happy Recorder
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/blob/master/LICENSE)
-[![Pipeline stat](https://gitlab.aiursoft.cn/anduin/HappyRecorder/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/pipelines)
-[![Test Coverage](https://gitlab.aiursoft.cn/anduin/HappyRecorder/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/anduin/HappyRecorder/-/pipelines)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/anduin/HappyRecorder/-/blob/master/LICENSE)
+[![Pipeline stat](https://gitlab.aiursoft.com/anduin/HappyRecorder/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/anduin/HappyRecorder/-/pipelines)
+[![Test Coverage](https://gitlab.aiursoft.com/anduin/HappyRecorder/badges/master/coverage.svg)](https://gitlab.aiursoft.com/anduin/HappyRecorder/-/pipelines)
 [![NuGet version (Anduin.HappyRecorder)](https://img.shields.io/nuget/v/Anduin.HappyRecorder.svg)](https://www.nuget.org/packages/Anduin.HappyRecorder/)
-[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/anduin/happyrecorder.svg)](https://gitlab.aiursoft.cn/anduin/happyrecorder/-/commits/master?ref_type=heads)
+[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.com/anduin/happyrecorder.svg)](https://gitlab.aiursoft.com/anduin/happyrecorder/-/commits/master?ref_type=heads)
 
 This project uses some simple mathematical models to calculate your current physical state by recording the time when you have happy each time. It helps users establish a scientifically healthy behavior cycle and avoid excessive physical consumption.
 
