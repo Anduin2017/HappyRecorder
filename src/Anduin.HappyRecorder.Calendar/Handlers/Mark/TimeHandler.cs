@@ -1,5 +1,4 @@
 ﻿using System.CommandLine;
-using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -15,10 +14,13 @@ public class TimeHandler : ExecutableCommandHandlerBuilder
     protected  override string Name => "time";
 
     protected  override string Description => "Mark specific time as happy time.";
-    
-    private readonly Option<DateTime> _timeOption = new(new[] { "-t", "--time" }, "Time string about when you triggered.")
+
+    private readonly Option<DateTime> _timeOption = new(
+        name: "--time",
+        aliases: ["-t"])
     {
-        IsRequired = true
+        Description = "Time string about when you triggered.",
+        Required = true
     };
 
     protected  override Option[] GetCommandOptions() => new Option[]

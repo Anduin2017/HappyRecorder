@@ -1,4 +1,4 @@
-﻿using System.CommandLine.Invocation;
+﻿using System.CommandLine;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;

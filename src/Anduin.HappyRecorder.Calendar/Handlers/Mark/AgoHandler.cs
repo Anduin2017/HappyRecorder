@@ -1,5 +1,4 @@
 ﻿using System.CommandLine;
-using System.CommandLine.Invocation;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -16,9 +15,12 @@ public class AgoHandler : ExecutableCommandHandlerBuilder
 
     protected  override string Description => "Mark past time as happy.";
 
-    private readonly Option<int> _minutesOption = new(new[] { "-m", "--minutes" }, "How many minutes ago to be marked as happy.")
+    private readonly Option<int> _minutesOption = new(
+        name: "--minutes",
+        aliases: ["-m"])
     {
-        IsRequired = true
+        Description = "How many minutes ago to be marked as happy.",
+        Required = true
     };
 
     protected  override Option[] GetCommandOptions() => new Option[]

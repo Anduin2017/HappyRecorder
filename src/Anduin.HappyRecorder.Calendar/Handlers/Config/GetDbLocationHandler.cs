@@ -1,4 +1,4 @@
-﻿using System.CommandLine.Invocation;
+﻿using System.CommandLine;
 using Aiursoft.CommandFramework.Framework;
 using Aiursoft.CommandFramework.Models;
 using Aiursoft.CommandFramework.Services;
@@ -15,11 +15,11 @@ public class GetDbLocationHandler: ExecutableCommandHandlerBuilder
     protected override async Task Execute(ParseResult context)
     {
         var verbose = context.GetValue(CommonOptionsProvider.VerboseOption);
-        
+
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;
-        
+
         var db = services.GetRequiredService<DatabaseManager>();
 
         var dbLocation = await db.GetDbLocation();
