@@ -26,11 +26,11 @@ public class AgoHandler : ExecutableCommandHandlerBuilder
         _minutesOption
     };
 
-    protected override async Task Execute(InvocationContext context)
+    protected override async Task Execute(ParseResult context)
     {
-        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
-        var dryRun = context.ParseResult.GetValueForOption(CommonOptionsProvider.DryRunOption);
-        var minutes = context.ParseResult.GetValueForOption(_minutesOption);
+        var verbose = context.GetValue(CommonOptionsProvider.VerboseOption);
+        var dryRun = context.GetValue(CommonOptionsProvider.DryRunOption);
+        var minutes = context.GetValue(_minutesOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

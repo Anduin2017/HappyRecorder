@@ -13,9 +13,9 @@ public class CalendarHandler : ExecutableCommandHandlerBuilder
 
     protected  override string Description => "Show score calendar.";
 
-    protected override async Task Execute(InvocationContext context)
+    protected override async Task Execute(ParseResult context)
     {
-        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
+        var verbose = context.GetValue(CommonOptionsProvider.VerboseOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

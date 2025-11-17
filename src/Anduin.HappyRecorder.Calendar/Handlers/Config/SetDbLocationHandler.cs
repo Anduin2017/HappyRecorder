@@ -18,10 +18,10 @@ public class SetDbLocationHandler : ExecutableCommandHandlerBuilder
         CommonOptionsProvider.PathOptions
     };
 
-    protected override async Task Execute(InvocationContext context)
+    protected override async Task Execute(ParseResult context)
     {
-        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
-        var path = context.ParseResult.GetValueForOption(CommonOptionsProvider.PathOptions)!;
+        var verbose = context.GetValue(CommonOptionsProvider.VerboseOption);
+        var path = context.GetValue(CommonOptionsProvider.PathOptions)!;
         
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)

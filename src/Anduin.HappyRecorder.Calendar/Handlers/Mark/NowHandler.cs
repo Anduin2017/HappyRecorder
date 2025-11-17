@@ -15,10 +15,10 @@ public class NowHandler : ExecutableCommandHandlerBuilder
 
     protected  override string Description => "Mark current time as happy time.";
 
-    protected override async Task Execute(InvocationContext context)
+    protected override async Task Execute(ParseResult context)
     {
-        var verbose = context.ParseResult.GetValueForOption(CommonOptionsProvider.VerboseOption);
-        var dryRun = context.ParseResult.GetValueForOption(CommonOptionsProvider.DryRunOption);
+        var verbose = context.GetValue(CommonOptionsProvider.VerboseOption);
+        var dryRun = context.GetValue(CommonOptionsProvider.DryRunOption);
         var services = ServiceBuilder
             .CreateCommandHostBuilder<Startup>(verbose)
             .Build().Services;

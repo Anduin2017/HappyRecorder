@@ -12,7 +12,7 @@ This project uses some simple mathematical models to calculate your current phys
 
 Requirements:
 
-1. [.NET 9 SDK](http://dot.net/)
+1. [.NET 10 SDK](http://dot.net/)
 
 Run the following command to install this tool:
 
