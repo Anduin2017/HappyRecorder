@@ -10,11 +10,11 @@ public class MarkHandler : NavigationCommandHandlerBuilder
 
     protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandlerBuilder[]
-        {
+        return
+        [
             new NowHandler(),
             new TimeHandler(),
             new AgoHandler()
-        };
+        ];
     }
 }

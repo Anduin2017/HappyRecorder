@@ -13,7 +13,7 @@ public class FeelingHandler : ExecutableCommandHandlerBuilder
 
     protected  override string Description => "Show current feeling.";
 
-    protected  override string[] Alias => new[] { "feel" };
+    protected  override string[] Alias => ["feel"];
 
     protected override async Task Execute(ParseResult context)
     {

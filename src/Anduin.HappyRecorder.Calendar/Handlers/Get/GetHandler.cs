@@ -10,12 +10,12 @@ public class GetHandler : NavigationCommandHandlerBuilder
 
     protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandlerBuilder[]
-        {
+        return
+        [
             new ScoreHandler(),
             new HistoryHandler(),
             new CalendarHandler(),
             new FeelingHandler()
-        };
+        ];
     }
 }

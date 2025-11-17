@@ -10,10 +10,10 @@ public class ConfigHandler : NavigationCommandHandlerBuilder
 
     protected override CommandHandlerBuilder[] GetSubCommandHandlers()
     {
-        return new CommandHandlerBuilder[]
-        {
+        return
+        [
             new GetDbLocationHandler(),
             new SetDbLocationHandler()
-        };
+        ];
     }
 }

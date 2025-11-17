@@ -12,10 +12,10 @@ public class SetDbLocationHandler : ExecutableCommandHandlerBuilder
     protected  override string Name => "set-db-location";
     protected  override string Description => "Set current program's database file location.";
     
-    protected  override Option[] GetCommandOptions() => new Option[]
-    {
+    protected  override Option[] GetCommandOptions() =>
+    [
         CommonOptionsProvider.PathOptions
-    };
+    ];
 
     protected override async Task Execute(ParseResult context)
     {

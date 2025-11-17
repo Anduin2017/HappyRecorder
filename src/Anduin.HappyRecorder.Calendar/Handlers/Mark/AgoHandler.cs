@@ -23,10 +23,10 @@ public class AgoHandler : ExecutableCommandHandlerBuilder
         Required = true
     };
 
-    protected  override Option[] GetCommandOptions() => new Option[]
-    {
+    protected  override Option[] GetCommandOptions() =>
+    [
         _minutesOption
-    };
+    ];
 
     protected override async Task Execute(ParseResult context)
     {

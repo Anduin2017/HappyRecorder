@@ -23,10 +23,10 @@ public class TimeHandler : ExecutableCommandHandlerBuilder
         Required = true
     };
 
-    protected  override Option[] GetCommandOptions() => new Option[]
-    {
+    protected  override Option[] GetCommandOptions() =>
+    [
         _timeOption
-    };
+    ];
 
     protected override async Task Execute(ParseResult context)
     {
