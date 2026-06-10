@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <Version>10.0.9</Version>
+  <PropertyGroup><OutputType>Exe</OutputType>
+    <Version>10.0.10</Version>
     <TargetFramework>net10.0</TargetFramework>
     <AssemblyName>happy-recorder</AssemblyName>
     <RootNamespace>Anduin.HappyRecorder</RootNamespace>
@@ -26,8 +25,7 @@
     <PackageProjectUrl>https://gitlab.aiursoft.com/Anduin/HappyRecorder</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://gitlab.aiursoft.com/Anduin/HappyRecorder</RepositoryUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile></PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Anduin.HappyRecorder.Calendar\Anduin.HappyRecorder.Calendar.csproj" />
   </ItemGroup>
